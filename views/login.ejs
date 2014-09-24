@@ -19,18 +19,18 @@
 	<% } %>
 
 	<!-- LOGIN FORM -->
-	<form action="/login" method="post">
+	<!--<form action="/login" method="post">-->
 		<div class="form-group">
 			<label>Email</label>
-			<input type="text" class="form-control" name="email">
+			<input id="email" type="text" class="form-control" name="email">
 		</div>
 		<div class="form-group">
 			<label>Password</label>
-			<input type="password" class="form-control" name="password">
+			<input id="password" type="password" class="form-control" name="password">
 		</div>
 
-		<button type="submit" class="btn btn-warning btn-lg">Login</button>
-	</form>
+		<button id="login_button" type="submit" class="btn btn-warning btn-lg">Login</button>
+	<!--</form>-->
 
 	<hr>
 
@@ -44,5 +44,32 @@
 
 </div>
 </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('#login_button').click(function () {
+
+            var email = $('#email').val();
+            var password = $('#password').val();
+            alert ('email/pass:' + email + ", " + password);
+
+            $.ajax({
+                type: "POST",
+                url: "/login",
+                data: { email: email , password: password },
+                dataType: 'html'
+            })
+                    .done(function () {
+                        console.log("http request succeeded");
+                        alert("login success");
+                    });
+
+        });
+
+    });
+</script>
+
+
 </body>
 </html>
