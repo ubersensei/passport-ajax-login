@@ -17,7 +17,7 @@ This tutorial has been upgraded to use ExpressJS 4.0. See [the commit](https://g
 
 If you would like to download the code and try it for yourself:
 
-1. Clone the repo: `git clone git@github.com:scotch-io/easy-node-authentication`
+1. Clone the repo: `git clone https://github.com/ubersensei/passport-ajax-login.git`
 2. Install packages: `npm install`
 3. Change out the database configuration in config/database.js
 4. Change out auth keys in config/auth.js
