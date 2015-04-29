@@ -1,5 +1,8 @@
 # Original Code
 
+Locally Code
+Basket > Baguette
+
 I have simply modified the code from [Easy Node Authentication] (https://github.com/scotch-io/easy-node-authentication)
 
 I wanted to test if I can login using `jquery/ajax`
